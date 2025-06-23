@@ -1,0 +1,15 @@
+{
+    "created": "2025-03-07T01:02:19.250550",
+    "description": "",
+    "format": "CSV",
+    "download_url": "https://data.humdata.org/dataset/e09595bd-f4c5-4a66-8130-5a05f14d5e64/resource/67b2d6fc-ff4f-4d04-a75e-80e3de81b072/download/international_migration_flow.csv",
+    "id": "67b2d6fc-ff4f-4d04-a75e-80e3de81b072",
+    "last_modified": "2025-03-07T01:02:19.046462",
+    "metadata_modified": "2025-03-07T01:02:20.537804",
+    "microdata": false,
+    "dataset_id": "e09595bd-f4c5-4a66-8130-5a05f14d5e64",
+    "resource_type": "file.upload",
+    "name": "international_migration_flow.csv",
+    "mimetype": "text/csv",
+    "size": "24.4M"
+}
