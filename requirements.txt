@@ -1,0 +1,30 @@
+# 科学计算
+numpy
+pandas
+
+# 可视化和地图支持（可选）
+matplotlib
+seaborn
+
+# 地理空间处理
+geopandas
+shapely
+rasterio
+rasterstats
+xarray
+netCDF4
+
+# 回归建模
+linearmodels
+statsmodels
+scikit-learn
+
+# 国家代码标准化
+country_converter
+
+# 距离计算和空间数据支持
+scipy
+joblib
+
+# Jupyter Notebook支持（可选）
+notebook
