@@ -7,8 +7,9 @@ from src.regression import run_panel_regression
 def main():
     # 1. 干旱数据处理
     drought_df = extract_country_spei(
-        nc_path='data/raw/spei03.nc',
-        shapefile_path='data/raw/ne_countries.shp'
+        spei_nc_path='data/raw/spei03.nc',
+        shapefile_path='data/raw/ne_50m_admin_0_countries/ne_50m_admin_0_countries.shp',
+        output_csv='data/processed/spei03_country_month_2019_2022.csv'
     )
 
     # 2. 市场准入计算
