@@ -56,7 +56,6 @@ plt.xlabel("Month")
 plt.ylabel("Number of Migrants")
 plt.grid(True)
 plt.tight_layout()
-plt.savefig("plot_monthly_total_flow.png")
 # print("finish")
 
 # # === 6. Top 10 迁移路线 ===
