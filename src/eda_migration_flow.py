@@ -6,11 +6,16 @@
 # - Analyse the distribution of migrants, trends over time, main migration routes
 # - Export of charts and cleaned data for modelling purposes
 # ------------------------------------------------------------
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
+
+# 读取国家代码映射表（假设Alpha-2 code和Alpha-3 code）
+code_map = pd.read_csv(r"E:\UNU-MERIT\Thesis\ClimateMobility\climate-migration-model\data\raw\countries_codes_263.csv")
+iso2_to_iso3 = dict(zip(code_map['Alpha-2 code'], code_map['Alpha-3 code']))
 
 # Set file path
 file_path = r"E:\UNU-MERIT\Thesis\ClimateMobility\climate-migration-model\data\raw\international_migration_flow.csv"
@@ -33,12 +38,25 @@ df['migration_month'] = pd.to_datetime(df['migration_month'])
 df['year'] = df['migration_month'].dt.year
 df['month'] = df['migration_month'].dt.month
 
+
 # === 3. Rename columns for clarity ===
 df.rename(columns={
     'country_from': 'origin',
     'country_to': 'destination',
     'num_migrants': 'flow'
 }, inplace=True)
+
+# === 3.1. 替换为ISO3国家代码 ===
+df['origin'] = df['origin'].astype(str).str.strip().str.upper().map(iso2_to_iso3)
+df['destination'] = df['destination'].astype(str).str.strip().str.upper().map(iso2_to_iso3)
+
+# 检查未匹配上的国家代码
+unmatched_origin = df[df['origin'].isnull()]['origin'].unique()
+unmatched_dest = df[df['destination'].isnull()]['destination'].unique()
+if len(unmatched_origin) > 0 or len(unmatched_dest) > 0:
+    print("未匹配上的 origin 国家代码:", unmatched_origin)
+    print("未匹配上的 destination 国家代码:", unmatched_dest)
+
 
 # === 4. Create log-transformed migration flow to be used as dependent variable in regression===
 df['log_flow'] = np.log1p(df['flow'])
@@ -56,6 +74,7 @@ plt.xlabel("Month")
 plt.ylabel("Number of Migrants")
 plt.grid(True)
 plt.tight_layout()
+plt.savefig("plot_monthly_total_flow.png")
 # print("finish")
 
 # # === 6. Top 10 迁移路线 ===
