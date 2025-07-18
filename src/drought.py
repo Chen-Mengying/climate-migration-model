@@ -70,5 +70,5 @@ if __name__ == "__main__":
     extract_country_spei(
         spei_nc_path='../climate-migration-model/data/raw/spei03.nc',
         shapefile_path='../climate-migration-model/data/raw/ne_50m_admin_0_countries/ne_50m_admin_0_countries.shp',
-        output_csv='../climate-migration-model/data/processed/spei03_country_month.csv'
+        output_csv='../climate-migration-model/data/processed/spei03_country_month_cleaned.csv'
     )
