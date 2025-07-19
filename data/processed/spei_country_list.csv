@@ -1,0 +1,188 @@
+country,n_obs,ISO_A3
+Afghanistan,48,AFG
+Aland,48,ALA
+Albania,48,ALB
+Algeria,48,DZA
+Angola,48,AGO
+Argentina,48,ARG
+Armenia,48,ARM
+Australia,48,AUS
+Austria,48,AUT
+Azerbaijan,48,AZE
+Bangladesh,48,BGD
+Belarus,48,BLR
+Belgium,48,BEL
+Belize,48,BLZ
+Benin,48,BEN
+Bhutan,48,BTN
+Bolivia,48,BOL
+Bosnia and Herzegovina,48,BIH
+Botswana,48,BWA
+Brazil,48,BRA
+Brunei,48,BRN
+Bulgaria,48,BGR
+Burkina Faso,48,BFA
+Burundi,48,BDI
+Cabo Verde,48,CPV
+Cambodia,48,KHM
+Cameroon,48,CMR
+Canada,48,CAN
+Central African Republic,48,CAF
+Chad,48,TCD
+Chile,48,CHL
+China,48,CHN
+Colombia,48,COL
+Comoros,48,COM
+Costa Rica,48,CRI
+Croatia,48,HRV
+Cuba,48,CUB
+Cyprus,48,CYP
+Czechia,48,CZE
+Democratic Republic of the Congo,48,COD
+Denmark,48,DNK
+Djibouti,48,DJI
+Dominican Republic,48,DOM
+East Timor,48,TLS
+Ecuador,48,ECU
+Egypt,48,EGY
+El Salvador,48,SLV
+Equatorial Guinea,48,GNQ
+Eritrea,48,ERI
+Estonia,48,EST
+Ethiopia,48,ETH
+Falkland Islands,48,FLK
+Faroe Islands,48,FRO
+Fiji,48,FJI
+Finland,48,FIN
+France,48,-99
+French Polynesia,48,PYF
+French Southern and Antarctic Lands,48,ATF
+Gabon,48,GAB
+Gambia,48,GMB
+Georgia,48,GEO
+Germany,48,DEU
+Ghana,48,GHA
+Greece,48,GRC
+Greenland,48,GRL
+Guatemala,48,GTM
+Guinea,48,GIN
+Guinea-Bissau,48,GNB
+Guyana,48,GUY
+Haiti,48,HTI
+Honduras,48,HND
+Hungary,48,HUN
+Iceland,48,ISL
+India,48,IND
+Indonesia,48,IDN
+Iran,48,IRN
+Iraq,48,IRQ
+Ireland,48,IRL
+Israel,48,ISR
+Italy,48,ITA
+Ivory Coast,48,CIV
+Jamaica,48,JAM
+Japan,48,JPN
+Jordan,48,JOR
+Kazakhstan,48,KAZ
+Kenya,48,KEN
+Kosovo,48,-99
+Kuwait,48,KWT
+Kyrgyzstan,48,KGZ
+Laos,48,LAO
+Latvia,48,LVA
+Lebanon,48,LBN
+Lesotho,48,LSO
+Liberia,48,LBR
+Libya,48,LBY
+Lithuania,48,LTU
+Luxembourg,48,LUX
+Madagascar,48,MDG
+Malawi,48,MWI
+Malaysia,48,MYS
+Mali,48,MLI
+Mauritania,48,MRT
+Mauritius,48,MUS
+Mexico,48,MEX
+Moldova,48,MDA
+Mongolia,48,MNG
+Montenegro,48,MNE
+Morocco,48,MAR
+Mozambique,48,MOZ
+Myanmar,48,MMR
+Namibia,48,NAM
+Nepal,48,NPL
+Netherlands,48,NLD
+New Caledonia,48,NCL
+New Zealand,48,NZL
+Nicaragua,48,NIC
+Niger,48,NER
+Nigeria,48,NGA
+North Korea,48,PRK
+North Macedonia,48,MKD
+Northern Cyprus,48,-99
+Norway,48,-99
+Oman,48,OMN
+Pakistan,48,PAK
+Palestine,48,PSE
+Panama,48,PAN
+Papua New Guinea,48,PNG
+Paraguay,48,PRY
+Peru,48,PER
+Philippines,48,PHL
+Poland,48,POL
+Portugal,48,PRT
+Puerto Rico,48,PRI
+Qatar,48,QAT
+Republic of Serbia,48,SRB
+Republic of the Congo,48,COG
+Romania,48,ROU
+Russia,48,RUS
+Rwanda,48,RWA
+Saint Vincent and the Grenadines,48,VCT
+Samoa,48,WSM
+Saudi Arabia,48,SAU
+Senegal,48,SEN
+Siachen Glacier,48,-99
+Sierra Leone,48,SLE
+Slovakia,48,SVK
+Slovenia,48,SVN
+Solomon Islands,48,SLB
+Somalia,48,SOM
+Somaliland,48,-99
+South Africa,48,ZAF
+South Georgia and the Islands,48,SGS
+South Korea,48,KOR
+South Sudan,48,SSD
+Spain,48,ESP
+Sri Lanka,48,LKA
+Sudan,48,SDN
+Suriname,48,SUR
+Sweden,48,SWE
+Switzerland,48,CHE
+Syria,48,SYR
+Taiwan,48,TWN
+Tajikistan,48,TJK
+Thailand,48,THA
+The Bahamas,48,BHS
+Togo,48,TGO
+Trinidad and Tobago,48,TTO
+Tunisia,48,TUN
+Turkey,48,TUR
+Turkmenistan,48,TKM
+Uganda,48,UGA
+Ukraine,48,UKR
+United Arab Emirates,48,ARE
+United Kingdom,48,GBR
+United Republic of Tanzania,48,TZA
+United States Virgin Islands,48,VIR
+United States of America,48,USA
+Uruguay,48,URY
+Uzbekistan,48,UZB
+Vanuatu,48,VUT
+Venezuela,48,VEN
+Vietnam,48,VNM
+Western Sahara,48,ESH
+Yemen,48,YEM
+Zambia,48,ZMB
+Zimbabwe,48,ZWE
+eSwatini,48,SWZ
