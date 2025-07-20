@@ -56,7 +56,14 @@ if len(unmatched_origin) > 0 or len(unmatched_dest) > 0:
 
 # 6. 保存清洗后的数据
 output_path = r"E:\UNU-MERIT\Thesis\ClimateMobility\climate-migration-model\data\processed\migration_flow_cleaned.csv"
-df.to_csv(output_path, index=False)
+df = df.rename(columns={'origin': 'origin_iso2', 'destination': 'destination_iso2'})
+cols = [
+    'origin_iso3', 'destination_iso3',
+    'migration_month', 'year', 'month',
+    'flow', 'log_flow',
+    'origin_iso2', 'destination_iso2'
+]
+df[cols].to_csv(output_path, index=False)
 print("missing value:\n", df.isnull().sum())
 
 # 7. 可视化月度迁移总量

@@ -54,7 +54,7 @@ Falkland Islands,48,FLK
 Faroe Islands,48,FRO
 Fiji,48,FJI
 Finland,48,FIN
-France,48,-99
+France,48,FRA
 French Polynesia,48,PYF
 French Southern and Antarctic Lands,48,ATF
 Gabon,48,GAB
@@ -68,7 +68,7 @@ Guatemala,48,GTM
 Guinea,48,GIN
 Guinea-Bissau,48,GNB
 Guyana,48,GUY
-Haiti,48,HTI
+Haiti,48,HTI 
 Honduras,48,HND
 Hungary,48,HUN
 Iceland,48,ISL
@@ -85,7 +85,7 @@ Japan,48,JPN
 Jordan,48,JOR
 Kazakhstan,48,KAZ
 Kenya,48,KEN
-Kosovo,48,-99
+Kosovo,48,XKX
 Kuwait,48,KWT
 Kyrgyzstan,48,KGZ
 Laos,48,LAO
@@ -119,8 +119,7 @@ Niger,48,NER
 Nigeria,48,NGA
 North Korea,48,PRK
 North Macedonia,48,MKD
-Northern Cyprus,48,-99
-Norway,48,-99
+Norway,48,NOR
 Oman,48,OMN
 Pakistan,48,PAK
 Palestine,48,PSE
@@ -142,13 +141,13 @@ Saint Vincent and the Grenadines,48,VCT
 Samoa,48,WSM
 Saudi Arabia,48,SAU
 Senegal,48,SEN
-Siachen Glacier,48,-99
+Siachen Glacier,48,SIA
 Sierra Leone,48,SLE
 Slovakia,48,SVK
 Slovenia,48,SVN
 Solomon Islands,48,SLB
 Somalia,48,SOM
-Somaliland,48,-99
+Somaliland,48,SOL
 South Africa,48,ZAF
 South Georgia and the Islands,48,SGS
 South Korea,48,KOR
