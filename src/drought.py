@@ -14,7 +14,8 @@ def extract_country_spei(
     iso_col='ISO_A3',
     spei_var='spei',
     verbose=True,
-    drop_countries=None
+    drop_countries=None,
+    fix_iso3=True
 ):
     """
     提取每国每月平均SPEI值，生成面板数据表。
@@ -28,6 +29,7 @@ def extract_country_spei(
         spei_var: SPEI变量名
         verbose: 是否打印进度
         drop_countries: 需要剔除的国家名列表
+        fix_iso3: 是否修正ISO3为-99的国家
     """
     ds = xr.open_dataset(spei_nc_path)
     spei = ds[spei_var]
@@ -61,9 +63,41 @@ def extract_country_spei(
             print(f"处理 {t.strftime('%Y-%m')} 完成")
     result = pd.concat(records, ignore_index=True)
     result = result.dropna(subset=['country'])
+
     # 删除指定国家
     if drop_countries is not None:
         result = result[~result['country'].isin(drop_countries)]
+
+    # 修正ISO_A3为-99的国家
+    if fix_iso3:
+        iso3_manual_map = {
+            'France': 'FRA',
+            'Kosovo': 'XKX',
+            'Norway': 'NOR',
+            'Siachen Glacier': 'SIA',
+            'Somaliland': 'SOL'
+        }
+        def fix_iso3_func(row):
+            if row['ISO_A3'] == '-99':
+                return iso3_manual_map.get(row['country'], None)
+            else:
+                return row['ISO_A3']
+        result['ISO_A3'] = result.apply(fix_iso3_func, axis=1)
+
+    # 最终检查
+    if verbose:
+        print("时间范围：", result['date'].min(), "到", result['date'].max())
+        print("spei列是否有空值：", result['spei'].isnull().sum() == 0)
+        print("ISO_A3列是否有空值：", result['ISO_A3'].isnull().sum() == 0)
+        print("ISO_A3是否还有-99：", (result['ISO_A3'] == '-99').sum() == 0)
+        print("国家数量：", result['country'].nunique())
+        print("ISO_A3数量：", result['ISO_A3'].nunique())
+        spei_count = result.groupby('country')['spei'].count()
+        print("每个国家的spei数量是否都是48：", (spei_count == 48).all())
+        print("spei数量不是48的国家：")
+        print(spei_count[spei_count != 48])
+
+    # 保存
     result = result[['country', 'ISO_A3', 'date', 'spei']]
     result.to_csv(output_csv, index=False)
     if verbose:
@@ -71,8 +105,7 @@ def extract_country_spei(
     return result
 
 if __name__ == "__main__":
-    # 需要剔除的国家
-    drop_countries = ['Antarctica', 'Cayman Islands', 'Kiribati']
+    drop_countries = ['Antarctica', 'Cayman Islands', 'Kiribati', 'Northern Cyprus']
     extract_country_spei(
         spei_nc_path='../climate-migration-model/data/raw/spei03.nc',
         shapefile_path='../climate-migration-model/data/raw/ne_50m_admin_0_countries/ne_50m_admin_0_countries.shp',
