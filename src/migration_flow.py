@@ -1,6 +1,6 @@
-# eda_migration_flow.py
+# migration_flow.py
 # ------------------------------------------------------------
-# Exploratory Data Analysis (EDA) for raw migration flow data
+# Migration Flow Data Processing
 # - Read and check data
 # - Handle missing country codes, export problematic rows with country names/ISO3
 # - Clean and standardize data, convert codes, feature engineering
