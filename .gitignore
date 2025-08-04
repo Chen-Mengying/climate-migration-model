@@ -1,5 +1,3 @@
 data/raw
-data/processed/migration_spei_ma_bf.csv
-data/processed/migration_spei_ma_bf_cleaned.csv
-data/processed/migration_spei_ma.csv
-data/processed/migration_spei.csv
+data/processed/final_merged_dataset.csv
+data/processed/final_merged_dataset_cleaned.csv
